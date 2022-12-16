@@ -1,0 +1,75 @@
+
+.hello{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 100px;
+        grid-gap: 1em;
+}
+.hello>div{
+        padding: 25px;
+        border: 2px solid black;
+        background-color: skyblue;
+}
+.hello>div:hover{
+        background-color: white;
+        grid-gap: 10px;
+}
+.hero{
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1em;
+        /* grid-auto-rows: 100px; */
+        grid-auto-rows: minmax(50px,auto);
+
+}
+.hero > div{
+        background: rgb(255, 180, 180);
+        padding: 10px;   
+} 
+.hero > div:nth-child(odd){ 
+        background: rgb(181, 206, 192);
+} 
+.box{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1em;
+        grid-auto-rows: minmax(100px,auto);
+        justify-items: stretch;             /*stretch is defult*/
+        align-items: stretch;
+}
+.box>div{
+        background: rgb(225, 180, 180);
+        padding: 20px;
+}
+.box>div:nth-child(even){
+        background: rgb(181, 206, 192);
+}
+.box1{
+        /* align-self: start; */
+        grid-column: 1/3;
+        grid-row: 1/3;
+}
+.box2{
+        /* align-self: end; */
+        grid-column: 3;
+        grid-row: 1/5;
+}
+.box3{
+        /* justify-self: end; */
+        grid-column: 2;
+        grid-row: 3/5;
+
+}
+.box4{
+        /* align-self: start; */
+        grid-column: 1;
+        grid-row: 2/5;
+        border-top: 1em solid white;
+        border-right: 1em solid white;
+}
+
+
+
+
+
